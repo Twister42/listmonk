@@ -129,6 +129,9 @@ type Settings struct {
 		Enabled bool   `json:"enabled"`
 		Key     string `json:"key"`
 	} `json:"bounce.forwardemail"`
+	BouncePostal struct {
+		Enabled bool `json:"enabled"`
+	} `json:"bounce.postal"`
 	BounceBoxes []struct {
 		UUID          string `json:"uuid"`
 		Enabled       bool   `json:"enabled"`

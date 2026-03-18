@@ -220,6 +220,15 @@ func (a *App) BounceWebhook(c echo.Context) error {
 		}
 		bounces = append(bounces, bs...)
 
+	// Postal (https://docs.postalserver.io/developer/webhooks).
+	case service == "postal" && a.cfg.BouncePostalEnabled:
+		bs, err := a.bounce.Postal.ProcessBounce(rawReq)
+		if err != nil {
+			a.log.Printf("error processing postal notification: %v", err)
+			return echo.NewHTTPError(http.StatusBadRequest, a.i18n.T("globals.messages.invalidData"))
+		}
+		bounces = append(bounces, bs...)
+
 	default:
 		return echo.NewHTTPError(http.StatusBadRequest, a.i18n.Ts("bounces.unknownService"))
 	}

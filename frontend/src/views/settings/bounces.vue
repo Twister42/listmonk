@@ -112,6 +112,15 @@
             </b-field>
           </div>
         </div>
+        <div class="columns">
+          <div class="column is-3">
+            <b-field :label="$t('settings.bounces.enablePostal')"
+              :message="$t('settings.bounces.enablePostalHelp')">
+              <b-switch v-model="data['bounce.postal'].enabled" name="postal_enabled" :native-value="true"
+                data-cy="btn-enable-bounce-postal" />
+            </b-field>
+          </div>
+        </div>
       </div>
     </div>
 

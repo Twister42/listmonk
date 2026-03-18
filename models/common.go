@@ -18,6 +18,7 @@ const (
 	// Headers attached to e-mails for bounce tracking.
 	EmailHeaderSubscriberUUID = "X-Listmonk-Subscriber"
 	EmailHeaderCampaignUUID   = "X-Listmonk-Campaign"
+	EmailHeaderPostalTag      = "X-Postal-Tag"
 
 	// Standard e-mail headers.
 	EmailHeaderDate        = "Date"

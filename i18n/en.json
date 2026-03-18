@@ -392,6 +392,8 @@
     "settings.bounces.enable": "Enable bounce processing",
     "settings.bounces.enableForwardemail": "Enable Forward Email",
     "settings.bounces.enableMailbox": "Enable bounce mailbox",
+    "settings.bounces.enablePostal": "Enable Postal",
+    "settings.bounces.enablePostalHelp": "Accept bounce webhooks from Postal. Configure the webhook URL in your Postal server for the MessageBounced event.",
     "settings.bounces.enablePostmark": "Enable Postmark",
     "settings.bounces.enableSES": "Enable SES",
     "settings.bounces.enableSendgrid": "Enable SendGrid",

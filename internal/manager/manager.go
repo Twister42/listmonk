@@ -500,6 +500,7 @@ func (m *Manager) worker() {
 			h := textproto.MIMEHeader{}
 			h.Set(models.EmailHeaderCampaignUUID, msg.Campaign.UUID)
 			h.Set(models.EmailHeaderSubscriberUUID, msg.Subscriber.UUID)
+			h.Set(models.EmailHeaderPostalTag, msg.Campaign.UUID)
 
 			// Attach List-Unsubscribe headers?
 			if m.cfg.UnsubHeader {
